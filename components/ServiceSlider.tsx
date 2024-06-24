@@ -75,7 +75,7 @@
 import React from 'react';
 
 const ServiceSlider = () => {
-  return <div>ServiceSlider</div>;
+  return <div>Hello wrold</div>;
 };
 
 export default ServiceSlider;
