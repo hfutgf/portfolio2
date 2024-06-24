@@ -1,12 +1,5 @@
 // "use client";
-// import {
-//   RxCrop,
-//   RxPencil2,
-//   RxDesktop,
-//   RxReader,
-//   RxRocket,
-//   RxArrowTopRight,
-// } from "react-icons/rx";
+
 // import { Swiper, SwiperSlide } from "swiper/react";
 // import { Pagination, FreeMode } from "swiper/modules";
 // import "swiper/css";
@@ -78,5 +71,13 @@
 //     </Swiper>
 //   );
 // };
+
+import React from 'react';
+
+const ServiceSlider = () => {
+  return <div>ServiceSlider</div>;
+};
+
+export default ServiceSlider;
 
 // export default ServiceSlider;
