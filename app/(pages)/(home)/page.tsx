@@ -4,7 +4,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import ProjectsBtn from "@/components/ProjectsBtn";
 import { fadeIn } from "@/variant";
-import Avatar from "@/components/Avatar";
+import Avatar from "@/components/ui/Avatar";
 import ParticlesContainer from "@/components/ParticlesContainer";
 const HomePage = () => {
   return (
@@ -50,7 +50,7 @@ const HomePage = () => {
         <div className="bg-none xl:bg-explosion xl:bg-cover xl:bg-right xl:bg-no-repeat w-full h-full absolute mix-blend-color-dodge translate-z-0 "></div>
         {/* <ParticlesContainer /> */}
         <motion.div
-          variants={fadeIn("up", 0.4)}
+          variants={fadeIn("up", 0.4)}  
           initial="hidden"
           animate="show"
           exit="hidden"

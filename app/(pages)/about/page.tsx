@@ -1,65 +1,48 @@
-"use client";
+'use client';
 
-import Avatar from "@/components/Avatar";
-import Circles from "@/components/Circles";
-import { useState } from "react";
-import {
-  FaHtml5,
-  FaCss3,
-  FaJs,
-  FaReact,
-  FaWordpress,
-  FaFigma,
-} from "react-icons/fa";
-import {
-  SiNextdotjs,
-  SiFramer,
-  SiAdobexd,
-  SiAdobephotoshop,
-} from "react-icons/si";
-import { motion } from "framer-motion";
-import { fadeIn } from "@/variant";
-import CountUp from "react-countup";
+import Avatar from '@/components/ui/Avatar';
+import Circles from '@/components/Circles';
+import { useState } from 'react';
+import { motion } from 'framer-motion';
+import { fadeIn } from '@/variant';
+import CountUp from 'react-countup';
+import Image from 'next/image';
 
 const aboutData = [
   {
-    title: "skills",
+    title: 'skills',
     info: [
       {
-        title: "Web Development",
+        title: 'Web Development',
         icons: [
-          <FaHtml5 />,
-          <FaCss3 />,
-          <FaJs />,
-          <FaReact />,
-          <SiNextdotjs />,
-          <SiFramer />,
-          <FaWordpress />,
+          '/svg/html.svg',
+          '/svg/js.svg',
+          '/svg/ts.svg',
+          '/svg/tailwindcss.svg',
+          '/svg/reactjs.svg',
+          '/svg/nextjs.svg',
+          '/svg/figma.svg',
+          '/svg/git.svg',
         ],
-        stage: "2011 - 2012",
-      },
-      {
-        stage: "2011 - 2012",
-        title: "UI/UX Design",
-        icons: [<FaFigma />, <SiAdobexd />, <SiAdobephotoshop />],
+        stage: '2023 - 2024',
       },
     ],
   },
-  {
-    title: "awards",
-    info: [
-      {
-        title: "Webby Awards - Honoree",
-        stage: "2011 - 2012",
-        icons: [<FaFigma />, <SiAdobexd />, <SiAdobephotoshop />],
-      },
-      {
-        title: "Adobe Design Achievement Awards - Finalist",
-        stage: "2009 - 2010",
-        icons: [<FaFigma />, <SiAdobexd />, <SiAdobephotoshop />],
-      },
-    ],
-  },
+  // {
+  //   title: 'awards',
+  //   info: [
+  //     {
+  //       title: 'Webby Awards - Honoree',
+  //       stage: '2011 - 2012',
+  //       icons: [<FaFigma />, <SiAdobexd />, <SiAdobephotoshop />],
+  //     },
+  //     {
+  //       title: 'Adobe Design Achievement Awards - Finalist',
+  //       stage: '2009 - 2010',
+  //       icons: [<FaFigma />, <SiAdobexd />, <SiAdobephotoshop />],
+  //     },
+  //   ],
+  // },
 ];
 
 const AboutPage = () => {
@@ -68,21 +51,21 @@ const AboutPage = () => {
     <div className="h-full bg-primary/30 py-32 text-center xl:text-left">
       <Circles />
       <motion.div
-        variants={fadeIn("right", 0.2)}
+        variants={fadeIn('right', 0.2)}
         initial="hidden"
         animate="show"
-        exit={"hidden"}
+        exit={'hidden'}
         className="hidden xl:flex absolute bottom-0 -left-[315px]"
       >
         <Avatar />
       </motion.div>
       <div className="container mx-auto h-full flex flex-col items-center xl:flex-row">
         <motion.div
-          variants={fadeIn("down", 0.2)}
+          variants={fadeIn('down', 0.2)}
           initial="hidden"
           animate="show"
           exit="hidden"
-          transition={{ duration: 0.3, ease: "easeInOut" }}
+          transition={{ duration: 0.3, ease: 'easeInOut' }}
           className="flex-1 flex flex-col justify-center"
         >
           <h2 className="h2">
@@ -124,7 +107,7 @@ const AboutPage = () => {
                 key={item.title}
                 className={`${
                   index === i &&
-                  "text-accent after:w-[100%] after:bg-red-600 after:transition-all after:duration-300"
+                  'text-accent after:w-[100%] after:bg-red-600 after:transition-all after:duration-300'
                 }  
                 cursor-pointer capitalize xl:text-lg relative after:w-8 after:h-[2px] after:bg-white after:absolute after:-bottom-1 after:left-0`}
               >
@@ -135,11 +118,11 @@ const AboutPage = () => {
           <div className=" py-2 xl:py-6 flex flex-col gap-y-2 xl:gap-y-4 items-center xl:items-start">
             {aboutData[index].info.map((item, i) => (
               <motion.div
-                variants={fadeIn("up", 0.2)}
+                variants={fadeIn('up', 0.2)}
                 initial="hidden"
                 animate="show"
                 exit="hidden"
-                transition={{ duration: 0.3, ease: "easeInOut" }}
+                transition={{ duration: 0.3, ease: 'easeInOut' }}
                 key={item.title}
                 className="flex-1 flex flex-col md:flex-row max-w-max gap-x-2 items-center text-white/60"
               >
@@ -148,7 +131,9 @@ const AboutPage = () => {
                 <div>{item.stage}</div>
                 <div className="flex gap-x-4">
                   {item.icons.map((icon) => (
-                    <div className="text-2xl text-white">{icon}</div>
+                    <div key={icon} className="text-2xl text-white">
+                      <Image src={icon} alt="icon" width={24} height={14} />
+                    </div>
                   ))}
                 </div>
               </motion.div>

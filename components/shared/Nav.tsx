@@ -1,29 +1,25 @@
-"use client";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+'use client';
 import {
-  HiHome,
-  HiUser,
-  HiViewColumns,
-  HiRectangleGroup,
-  HiChatBubbleBottomCenterText,
-  HiEnvelope,
-} from "react-icons/hi2";
+  BedDoubleIcon,
+  Briefcase,
+  Columns2,
+  House,
+  Mail,
+  RectangleVertical,
+  User,
+} from 'lucide-react';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
-  export const navData = [
-  { name: "home", path: "/", icon: <HiHome /> },
-  { name: "about", path: "/about", icon: <HiUser /> },
-  { name: "services", path: "/services", icon: <HiRectangleGroup /> },
-  { name: "work", path: "/work", icon: <HiViewColumns /> },
+export const navData = [
+  { name: 'home', path: '/', icon: <House /> },
+  { name: 'about', path: '/about', icon: <User /> },
+  { name: 'work', path: '/work', icon: <Briefcase /> },
+
   {
-    name: "testimonials",
-    path: "/testimonials",
-    icon: <HiChatBubbleBottomCenterText />,
-  },
-  {
-    name: "contact",
-    path: "/contact",
-    icon: <HiEnvelope />,
+    name: 'contact',
+    path: '/contact',
+    icon: <Mail />,
   },
 ];
 
@@ -35,7 +31,7 @@ const Nav = () => {
         {navData.map((link) => (
           <Link
             className={`${
-              link.path === pathname && "text-accent"
+              link.path === pathname && 'text-accent'
             } relative flex items-center group hover:text-accent transition-all duration-300`}
             key={link.path}
             href={link.path}
