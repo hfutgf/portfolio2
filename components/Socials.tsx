@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import Telegram from '/svg/telegram.svg';
 import Image from 'next/image';
 
 const Socials = () => {
