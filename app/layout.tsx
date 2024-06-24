@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Layout from "@/components/Layout";
+import Layout from "@/components/layouts/Layout";
 import { AnimatePresence } from "framer-motion";
-import Transition from "@/components/Transition";
+import Transition from "@/components/ui/Transition";
 
 const inter = Inter({ subsets: ["latin"] });
 

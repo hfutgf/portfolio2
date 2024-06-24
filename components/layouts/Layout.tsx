@@ -1,8 +1,8 @@
 import { Sora } from "next/font/google";
 import React from "react";
-import Nav from "./shared/Nav";
-import Header from "./shared/Header";
-import TopLeftImg from "./TopLeftImg";
+import Nav from "../shared/Nav";
+import Header from "../shared/Header";
+import TopLeftImg from "../ui/TopLeftImg";
 
 const sora = Sora({ subsets: ["latin"], variable: "--font-sora" });
 

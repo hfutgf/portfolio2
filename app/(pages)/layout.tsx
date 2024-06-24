@@ -1,9 +1,9 @@
-"use client";
-import Layout from "@/components/Layout";
-import { AnimatePresence, motion } from "framer-motion";
-import Transition from "@/components/Transition";
-import { usePathname } from "next/navigation";
-import NextTopLoader from "nextjs-toploader";
+'use client';
+import Layout from '@/components/layouts/Layout';
+import { AnimatePresence, motion } from 'framer-motion';
+import Transition from '@/components/ui/Transition';
+import { usePathname } from 'next/navigation';
+import NextTopLoader from 'nextjs-toploader';
 
 export default function RootLayout({
   children,

@@ -1,7 +1,7 @@
 'use client';
 
 import Avatar from '@/components/ui/Avatar';
-import Circles from '@/components/Circles';
+import Circles from '@/components/ui/Circles';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { fadeIn } from '@/variant';
@@ -48,7 +48,7 @@ const aboutData = [
 const AboutPage = () => {
   const [index, setIndex] = useState(0);
   return (
-    <div className="h-full bg-primary/30 py-32 text-center xl:text-left">
+    <div className="h-full bg-primary/30 py-32 text-center xl:text-left z-[1]">
       <Circles />
       <motion.div
         variants={fadeIn('right', 0.2)}
@@ -81,15 +81,15 @@ const AboutPage = () => {
             <div className="flex items-center flex-1 xl:gap-x-6">
               <div className="relative flex flex-col items-center flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
                 <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                  <CountUp start={0} end={10} duration={5} /> +
+                  <CountUp start={0} end={6} duration={5} /> +
                 </div>
                 <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
-                  Years of experiens
+                  Month of experiens
                 </div>
               </div>
               <div className="relative flex flex-col items-center flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
                 <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                  <CountUp start={0} end={250} duration={7} /> +
+                  <CountUp start={0} end={5} duration={7} /> +
                 </div>
                 <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
                   Satisfied clients

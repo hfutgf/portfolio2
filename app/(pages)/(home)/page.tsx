@@ -2,10 +2,11 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import ProjectsBtn from '@/components/ProjectsBtn';
+import ProjectsBtn from '@/components/ui/ProjectsBtn';
 import { fadeIn } from '@/variant';
 import Avatar from '@/components/ui/Avatar';
-import ParticlesContainer from '@/components/ParticlesContainer';
+import ParticlesContainer from '@/components/containers/ParticlesContainer';
+
 const HomePage = () => {
   return (
     <div className="bg-primary/60 h-full">
@@ -18,8 +19,8 @@ const HomePage = () => {
             exit="hidden"
             className="h1"
           >
-            Transforming ideas <br /> Into{' '}
-            <span className="text-accent">Digital Reality</span>
+            Glad to see you on my
+            <span className="text-accent"> site</span>
           </motion.h1>
           <motion.p
             variants={fadeIn('down', 0.3)}
@@ -28,9 +29,9 @@ const HomePage = () => {
             exit="hidden"
             className="max-w-sm xl:max-w-xl  mx-auto xl:mx-0 mb-10 xl:mb-16"
           >
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum quae
-            nulla doloremque quibusdam obcaecati repellat fuga labore nemo fugit
-            perferendis.
+            I am a front-end developer with over 6 month of experience,
+            specializing in creating interactive web applications using React
+            and Next.js.
           </motion.p>
           <div className="flex justify-center xl:hidden relative">
             <ProjectsBtn />
